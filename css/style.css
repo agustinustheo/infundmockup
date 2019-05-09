@@ -276,7 +276,7 @@ footer > div > *{
     background: white;
 
     position: absolute; 
-    top: calc(50% - (327px / 2)); 
+    top: calc(50% - (407px / 2)); 
     left: calc(50% - (380px / 2)); 
     z-index: 12;
 
@@ -1116,4 +1116,36 @@ nav.infund-landing-scroll-nav.infund-nav > .infund-nav-item-container > *:nth-la
     #infundProposalUploadData > div.infund-signup-buttons{
         justify-content: center;
     }
+}
+.infund-sound-tutorial-button{
+    border-radius: 10px; 
+    width: 40px; 
+    height: 40px; 
+    background: #75c77d;
+
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.infund-sound-tutorial-button > i{
+    color: white;
+    display: block;
+}
+.infund-tutorial-container{
+    width: 100%;
+    padding-top: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.infund-tutorial-container > *{
+    margin: 5px;
+}
+.infund-proposal-hover-options > a{
+    text-decoration: none;
+}
+.infund-proposal-hover-options > a:hover{
+    text-decoration: underline;
 }

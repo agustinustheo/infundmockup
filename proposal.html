@@ -19,6 +19,15 @@
 
         <main class="infund-dashboard-main infund-proposal-upload-main">
             <h2>Proposal Confirm</h2>
+            <div class="infund-tutorial-container" id="audioTrigger">
+                <div class="infund-sound-tutorial-button">
+                    <i class="fas fa-volume-down fa-1x"></i>
+                </div>
+                <div>
+                    Play Page Tutorial
+                </div>
+                <audio id="audio" src="audio/Proposal (online-audio-converter.com).mp3"></audio>
+            </div>
             <div class="infund-proposal-form">
                 <div>
                     <div class="infund-proposal-card">
@@ -50,5 +59,28 @@
                 </div>
             </div>
         </footer>
+
+        <script>
+            let audio = document.getElementById("audio");
+            let volumeIcon = document.getElementById('audioTrigger').getElementsByClassName('fa-volume-down')[0];
+            document.getElementById('audioTrigger').onclick = function(){
+                let volumeIcon = this.getElementsByClassName('fa-volume-down')[0];
+                volumeIcon.classList.remove("fa-volume-down");
+                volumeIcon.classList.add("fa-volume-up");
+                
+                let audio = document.getElementById("audio");
+                audio.play();
+            }
+            audio.addEventListener("ended", function(){
+                volumeIcon.classList.remove("fa-volume-up");
+                volumeIcon.classList.add("fa-volume-down");
+            });
+            let button = document.getElementsByClassName('infund-button');
+            for(let i = 0; i < button.length; i++){
+                button[i].onclick = function(){
+                    window.location.href = "dashboard.html";
+                }
+            }
+        </script>
     </body>
 </html>
